@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CodeProgramming.com</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.svg" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid">
+
+        <div class="col-xl-10 d-flex align-items-center">
+         
+          <!--image logo -->
+          <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
+          <!-- .nav-menu -->
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="#header">Главная страница</a></li>
+              <li><a href="#tests">Тест</a></li>
+              <li><a href="lessons.html">Уроки</a></li>
+             </ul>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= 1 Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    
+      
+        <div class="col-xl-10">
+          <div class="row">
+            <div class="col-xl-5">
+              <h1>Освой программирование с CodeProgramming</h1>
+              <h2>Интерактивные курсы, практические задания и поддержка сообщества для всех уровней подготовки</h2>
+            </div>
+          </div>
+        </div>
+      
+    
+
+  </section><!-- End 1 -->
+
+  <main id="main">
+
+   <!-- ======= 2 Section ======= -->
+    <section id="tabs" class="tabs">
+      <div class="container">
+
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+              <h4 class="d-none d-lg-block">CodeProgramming</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-toggle="tab" href="#tab-2">
+              <h4 class="d-none d-lg-block">Востребованность</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-toggle="tab" href="#tab-3">
+              <h4 class="d-none d-lg-block">Высокая зарплата</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-toggle="tab" href="#tab-4">
+              <h4 class="d-none d-lg-block">Творчество</h4>
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Зачем изучать программирование?</h3>
+                <p class="font-italic">
+                  изучение программирования—это инвестиция в себя, которая приносит нам материальные и нематериальные дивиденды, открывая множество возможностей для понимания технологического мира, способствуя развитию логического и аналитического мышления.
+                  сам процесс изучения и впоследствии создания кода помогает нам решать сложные задачи, развивая креативность и способность к творческому мышлению.
+                </h3> 
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/agefis-vll0Bb04XTc-unsplash.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          
+    </section><!-- End 2 Section -->
+    <!-- ======= Tests Section ======= -->
+    <section id="tests" class="tests">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Тест</h2>
+          <h3> данный тест помогут вам разобраться с вашим уровнем знаний в прораммирование</h3>
+        </div>
+
+    </section><!--End Tests Section -->
+     <!-- creating a modal for when quiz ends -->
+    <section>  
+     <div class="modal-container" id="score-modal">
+
+        <div class="modal-content-container">
+
+         <div class="section-title"><h1>Тест завершен.</h1>
+
+            <div class="grade-details">
+                <h3>Попытки : 10</h3>
+                <h3>Неправильные ответы : <span id="wrong-answers"></span></h3>
+                <h3>Правильные ответы : <span id="right-answers"></span></h3>
+                <h3>Оценка : <span id="grade-percentage"></span>%</h3>
+                <p ><span id="remarks"></span></h3>
+            </div>
+            
+
+            <div class="modal-button-container">
+                <button onclick="closeScoreModal()">Продолжить</button>
+            </div>
+         </div>
+        </div>
+    </div>
+<!-- end of modal of quiz details-->
+<section>
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+    <div class="game-quiz-container">
+        <div class="game-question-container">
+
+        <div class="game-details-container">
+            <h2>Счет : <span id="player-score"></span> / 10</h2>
+            <h2>Вопрос : <span id="question-number"></span> / 10</h2>
+        </div>
+            <h1 id="display-question"></h1>
+        </div>
+
+        <div class="game-options-container">
+
+           <div class="modal-container" id="option-modal">
+
+                <div class="modal-content-container">
+                     <h4>Выберите вариант ответа</h4>
+
+                     <div class="modal-button-container">
+                        <button onclick="closeOptionModal()">Продолжить</button>
+                    </div>
+
+                </div>
+
+           </div>
+
+            <span>
+                <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                <label for="option-one" class="option" id="option-one-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                <label for="option-two" class="option" id="option-two-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                <label for="option-three" class="option" id="option-three-label"></label>
+            </span>
+
+
+            <span>
+                <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                <label for="option-four" class="option" id="option-four-label"></label>
+            </span>
+
+
+        </div>
+
+        <div class="next-button-container">
+            <button onclick="handleNextQuestion()">Следующий вопрос</button>
+        </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main><!-- End #main -->
+<script src="index.js"></script>
+</body>
+
+</html>
